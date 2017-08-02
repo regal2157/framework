@@ -422,7 +422,7 @@ trait HasRelationships
         // just sort the models and join them together to get the table name.
         $models = [
             Str::snake(class_basename($related)),
-            Str::snake(class_basename($this)),
+            Str::plural(Str::snake(class_basename($this))),
         ];
 
         // Now that we have the model names in an array we can just sort them and
